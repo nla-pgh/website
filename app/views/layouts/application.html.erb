@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body>
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container" class="container">
+      <header id="header">
+				<div class="container">
+					<%= render '/refinery/header' -%>
+				</div>
+      </header>
+			<%= render(:partial => "/refinery/menu", :locals => {
+									 :dom_id => 'menu',
+									 :css => 'menu'
+								 }) %>
+      <section id="page">
+        <%= yield %>
+      </section>
+      <footer>
+        <%= render '/refinery/footer' -%>
+      </footer>
+    </div>
+  </body>
+</html>

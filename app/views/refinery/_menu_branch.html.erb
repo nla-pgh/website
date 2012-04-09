@@ -1,0 +1,40 @@
+<%- # Dropdown Menu %>
+<% if ( (children = menu_branch.children unless hide_children).present? &&
+				(!local_assigns[:menu_levels] || menu_branch.ancestors.length < local_assigns[:menu_levels]) ) -%>
+	
+	<%
+		if !!local_assigns[:apply_css] and (classes = menu_branch_css(local_assigns)).any?
+			css = "class='#{classes.join(' ')} dropdown'".html_safe
+		end
+	-%>
+
+	<li<%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %>>
+		<a 	href="#"
+				class="dropdown-toggle"
+				data-toggle="dropdown">
+				<%= menu_branch.title %>
+				<b class="caret"></b>
+		</a>
+
+		<ul class='dropdown-menu'>
+			<%= render :partial => '/refinery/menu_branch', :collection => children,
+								 :locals => {
+									 :apply_css => local_assigns[:apply_css],
+									 :hide_children => !!hide_children,
+									 :menu_levels => local_assigns[:menu_levels]
+								 } -%>
+		</ul>
+	</li>
+<% else %>
+
+	<%
+		if !!local_assigns[:apply_css] and (classes = menu_branch_css(local_assigns)).any?
+			css = "class='#{classes.join(' ')}'".html_safe
+		end
+	-%>
+
+	<li<%= ['', css].compact.join(' ').gsub(/\ *$/, '').html_safe %>>
+		<%= link_to(menu_branch.title, refinery.url_for(menu_branch.url))-%>
+	</li>
+
+<% end -%>
