@@ -5,22 +5,25 @@
   <body>
     <%= site_bar -%>
     <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+		<header id="header">
+				<%= render '/refinery/header' -%>
+		</header>
     <div id="page_container" class="container">
-      <header id="header">
-				<div class="container">
-					<%= render '/refinery/header' -%>
-				</div>
-      </header>
+			<!-- Navigation -->
 			<%= render(:partial => "/refinery/menu", :locals => {
 									 :dom_id => 'menu',
 									 :css => 'menu'
 								 }) %>
-      <section id="page">
+
+			<!-- Body -->
+      <section id="page" class="container">
         <%= yield %>
       </section>
-      <footer>
-        <%= render '/refinery/footer' -%>
-      </footer>
+
     </div>
+		<!-- Footer -->
+		<footer class="navbar">
+			<%= render '/refinery/footer' -%>
+		</footer>
   </body>
 </html>

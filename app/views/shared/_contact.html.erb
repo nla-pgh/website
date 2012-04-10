@@ -1,0 +1,29 @@
+<% address = '5429 Penn Ave. Pittsburgh, PA 15206' %>
+<% email = 'contact@neighborhoodlearning.org' %>
+<% copywriting_options( { scope: 'Footer', phrase_type: 'text' } ) do %>
+	<p>
+		<i class='icon-home icon-white'></i>
+		Address:
+		<%= copywriting('Address', 
+			default: "#{link_to address, "http://g.co/maps/m4jjc"}").html_safe %>
+	</p>
+
+	<p>
+		<i class="icon-envelope icon-white"></i>
+		Email:
+		<%= copywriting('Email',
+										default: "#{link_to email, 'mailto:' + email}").html_safe %>
+	</p>
+
+	<p>
+		<i class='icon-headphones icon-white'></i>
+		Phone:
+		<%= copywriting('Phone', default: '412-363-1910').html_safe %>
+	</p>
+
+	<p>
+		<i class='icon-print icon-white'></i>
+		Fax:
+		<%= copywriting('Fax', default: '412-363-1592').html_safe %>
+	</p>
+<% end %>

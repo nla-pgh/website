@@ -1,11 +1,44 @@
-<div class="container">
-<%= link_to root_path do %>
-	<%= image_tag "nla_logo.png", alt: "Neighborhood Learning Alliance Logo" %>
-<% end %>
+<!-- Header -->
+<div class="navbar navbar-fixed-top">
+	<div class="navbar-inner">
+		<div class="container">
 
-	<div class="pull-right">
-		<%= image_tag "sn_icons/fb.png", alt: "Neighborhood Learning Alliance Facebook", class: "span1"%>
-		<%= image_tag "sn_icons/gplus.png", alt: "Neighborhood Learning Alliance Google+", class: "span1"%>
-		<%= image_tag "sn_icons/twitter.png", alt: "Neighborhood Learning Alliance Twitter", class: "span1"%>
+			<!-- Logo -->
+			<%= link_to refinery.root_path do %>
+				<%= image_tag "nla_logo.png", alt: "Neighborhood Learning Alliance Logo", id: "logo" %>
+			<% end %>
+
+			<div class="pull-right">
+
+				<!-- Search Box -->
+				<%= form_tag refinery.search_path, class: "well form-search", id: "search" do -%>
+					<%= text_field_tag 	:query, {}, {:type => "search",
+					:placeholder => "Search site for...",
+					:value => (params[:query] if params[:query]), :class => "input-medium search-query"}%>
+					<%= submit_tag "Search", :class => "btn"%>
+				<% end %>
+
+				<!-- Social Network Icons -->
+
+				<ul class="thumbnails pull-right" id="sn-icons">
+					<li class="span1">
+						<a href="#" class="thumbnail">
+							<%= image_tag "sn_icons/fb.png", alt: "Neighborhood Learning Alliance Facebook"%>
+						</a>
+					</li>
+					<li class="span1">
+						<a href="#" class="thumbnail">
+							<%= image_tag "sn_icons/gplus.png", alt: "Neighborhood Learning Alliance Google+"%>
+						</a>
+					</li>
+					<li class="span1">
+						<a href="#" class="thumbnail">
+							<%= image_tag "sn_icons/twitter.png", alt: "Neighborhood Learning Alliance Twitter"%>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
+

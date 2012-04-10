@@ -6,7 +6,7 @@
     css = [(css || 'menu clearfix')].flatten.join(' ')
     hide_children = Refinery::Core.menu_hide_children if hide_children.nil?
 -%>
-<nav id='<%= dom_id %>' class='<%= css %> navbar'>
+<nav id='<%= dom_id %>' class='<%= css %> navbar navbar-fixed-top'>
 	<div class="navbar-inner">
 		<div class="container">
 			<ul class="nav">

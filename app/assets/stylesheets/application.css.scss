@@ -1,1 +1,91 @@
+// NLA branding
+$nlaRed: #af0a0a;
+$nlaBlack: #282828;
+
+// Bootstrap Overrides//
+// ===================//
+
+$baseFontFamily: "Ubuntu", sans-serif;
+
+// Navbar Background
+$navbarBackground: darken($nlaRed, 10%);
+$navbarBackgroundHighlight: $nlaRed;
+
+// Navbar Texts
+$navbarText: white;
+$navbarLinkColor: white;
+$navbarLinkBackgroundHover: $nlaBlack;
+$navbarLinkBackgroundActive: $nlaBlack;
+
+// Dropdown
+$dropdownBackground: $nlaRed;
+$dropdownLinkColor: white;
+$dropdownLinkColorHover: darken(white, 20%);
+
+// Links
+$linkColor: $nlaRed;
 @import "bootstrap";
+
+body {
+	padding: { 
+		top: 211px; 
+	}
+}
+
+#logo {
+	padding: { top: 10px; }
+}
+
+header {
+	.navbar-inner {
+		background: $white;
+	}
+
+	#search {
+		background: { color: $nlaRed; }
+
+		.btn {
+			margin: { top: 0; }
+		}
+	}
+
+}
+
+nav#menu {
+	top: 166px;
+
+	li {
+		a {
+			font: {
+				weight: bold;
+				size: 16px;
+			}
+		}
+	}
+}
+
+ul#sn-icons {
+	margin: { bottom: 0; }
+}
+
+footer.navbar {
+
+	// Act like a fixed navbar
+	.container {
+		@include gridCoreSpan($gridColumns, $gridColumnWidth, $gridGutterWidth);
+	}
+
+	a {
+		color: white;
+		&:hover {
+			color: darken(white, 15%);
+			text-decoration: none;
+		}
+	}
+
+	.navbar-inner {
+		padding: { top: 10px; }
+	}
+
+	margin: { bottom: 0; }
+}

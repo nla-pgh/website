@@ -1,4 +1,10 @@
-<p>
-  <%= t('.copyright', :year => Time.now.year,
-                      :site_name => Refinery::Core.site_name) %>
-</p>
+<div class="navbar-inner">
+	<div class="container">
+		<%= render 'shared/contact' %>
+
+		<p>
+			<%= t('.copyright', :year => Time.now.year,
+													:site_name => Refinery::Core.site_name) %>
+		</p>
+	</div>
+</div>

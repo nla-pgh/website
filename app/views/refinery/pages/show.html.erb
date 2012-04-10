@@ -1,17 +1,15 @@
-<div class="container">
-	<div class="page-header">
-		<h1><%= page_title %></h1>
+<div class="page-header">
+	<h1><%= page_title %></h1>
+</div>
+
+<div class="row">
+
+	<div id='body_content' class="span7">
+		<%=raw @page.content_for(:body) %>
 	</div>
 
-	<div class="row">
-
-		<div id='body_content' class="span7">
-			<%=raw @page.content_for(:body) %>
-		</div>
-
-		<div id='site_body_content' class="span4">
-			<%=raw @page.content_for(:side_body) %>
-		</div>
-
+	<div id='site_body_content' class="span4">
+		<%=raw @page.content_for(:side_body) %>
 	</div>
+
 </div>
