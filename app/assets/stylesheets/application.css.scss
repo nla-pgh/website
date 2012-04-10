@@ -35,6 +35,10 @@ body {
 	padding: { 
 		top: 211px; 
 	}
+
+	#page {
+		min-height: 400px;
+	}
 }
 
 #logo {
@@ -80,23 +84,24 @@ ul#sn-icons {
 /************/
 /*Hero Unit */
 /************/
-.hero-unit {
+.hero-unit#hero {
+	margin: { top: 10px; }
+
 	height: 400px;
 
 	#prezi {
-		width: 75%;
 		height: 100%;
 		z-index: -99;
 	}
 
 	#take-actions {
-		width: 23%;
 		height: 100%;
 
 		& > a {
 			@include buttonBackground($navbarBackgroundHighlight, $navbarBackground);
 
 			width: 100%;
+
 			color: white;
 			font: {
 				weight: bold;
@@ -104,7 +109,7 @@ ul#sn-icons {
 			}
 
 			margin: {
-				left: 2%;
+				left: 1%;
 				top: 8%;
 			}
 		}
@@ -121,6 +126,14 @@ ul#sn-icons {
 	}
 }
 
+/************/
+/**Partners**/
+/************/
+#partners {
+	img {
+		padding: 2px;
+	}
+}
 
 /************/
 /** Footer **/

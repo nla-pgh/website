@@ -20,11 +20,11 @@ module ApplicationHelper
 	end
 
 	def mission
-		Refinery::Page.find_by_title("Our Mission")
+		Refinery::Page.find_by_title("Mission Statement")
 	end
 
 	def vision
-		Refinery::Page.find_by_title("Our Vision")
+		Refinery::Page.find_by_title("Vision Statement")
 	end
 
 	def take_action

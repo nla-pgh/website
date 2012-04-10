@@ -19,7 +19,9 @@
       <section id="page" class="container">
 				<% if @page and not @page.home? %>
 					<div class="page-header">
-						<h1><%= @page.title.titlecase %></h1>
+						<h1><%= @page.title.titlecase %>
+							<small><%= sanitize @page.content_for(:subtitle), tags: []%></small>
+					</h1>
 					</div>
 				<% end %>
         <%= yield %>
