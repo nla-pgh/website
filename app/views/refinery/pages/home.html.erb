@@ -1,5 +1,16 @@
 <div class="row">
-  
+	<div class="span12">
+		<%= render 'refinery/pages/hero' %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="span12">
+		<h1 class="page-header">What's Happening</h1>
+	</div>
+</div>
+
+<div class="row">
 	<div id='body_content' class="span8">
     <%= render 'refinery/pages/recent_news' %> 
 	</div>
@@ -14,8 +25,12 @@
   <div class="span12">
     <div id='partner_list'>
       <h1 id='partners' class="page-header">Partners</h1>
-        <%= raw @page.content_for(:partners) %>
-      </h2>
     </div>
   </div>
+</div>
+
+<div class="row">
+	<div class="span12">
+		<%= raw @page.content_for(:partners) %>
+	</div>
 </div>

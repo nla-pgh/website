@@ -61,5 +61,13 @@ module NlaWebsite2
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+		# Twitter authentication to remove rate limit
+		Twitter.configure do |config|
+			config.consumer_key = "uCtt8eBjjrZ07Wcsbyr1ww"
+			config.consumer_secret = "f1MPEXtgYzR4mttmSVOQ6Q26Z8lLqLLrWMS44CAIitQ"
+			config.oauth_token = "466585376-ZUhSXaop9VcVHtEszZukiTE45MbT0pm5UUH91Bi5"
+			config.oauth_token_secret = "niJe3XQoZrtWOnDgYBc1jHwwcqHe7Tnm0KAWbcpI"
+		end
   end
 end

@@ -45,4 +45,10 @@ Refinery::Core.configure do |config|
 
   # Register extra stylesheet for backend (optional options)
   # config.register_stylesheet "custom", :media => 'screen'
+	
+
+	# Solves Mass-Assignment Error with the locale attribute
+	Globalize::ActiveRecord::Translation.class_eval do
+		  attr_accessible :locale
+	end
 end

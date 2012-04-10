@@ -53,22 +53,67 @@ header {
 			margin: { top: 0; }
 		}
 	}
-
 }
 
-@import "nav";
+/************/
+/**SN Icons**/
+/************/
 
 ul#sn-icons {
 	margin: { bottom: 0; }
 }
 
+/************/
+/*** Nav ****/
+/************/
+@import "nav";
 
-// Side bar
+/************/
+/**Side Bar**/
+/************/
 #partner_list {
   img {
     padding: 2px;
   }
 }
+
+/************/
+/*Hero Unit */
+/************/
+.hero-unit {
+	height: 400px;
+
+	#prezi {
+		width: 75%;
+		height: 100%;
+		z-index: -99;
+	}
+
+	#take-actions {
+		width: 23%;
+		height: 100%;
+
+		& > a {
+			@include buttonBackground($navbarBackgroundHighlight, $navbarBackground);
+
+			width: 100%;
+			color: white;
+			font: {
+				weight: bold;
+				size: 3em;
+			}
+
+			margin: {
+				left: 2%;
+				top: 8%;
+			}
+		}
+	}
+}
+
+/************/
+/** Footer **/
+/************/
 footer.navbar {
 
 	// Act like a fixed navbar
