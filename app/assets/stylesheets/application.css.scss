@@ -2,9 +2,14 @@
 $nlaRed: #af0a0a;
 $nlaBlack: #282828;
 
+
+// Mixins
+@mixin rounded($horiz, $vert, $radius: 1em) {
+		border-#{$horiz}-#{$vert}-radius: $radius;
+}
+
 // Bootstrap Overrides//
 // ===================//
-
 $baseFontFamily: "Ubuntu", sans-serif;
 
 // Navbar Background
@@ -51,18 +56,7 @@ header {
 
 }
 
-nav#menu {
-	top: 166px;
-
-	li {
-		a {
-			font: {
-				weight: bold;
-				size: 16px;
-			}
-		}
-	}
-}
+@import "nav";
 
 ul#sn-icons {
 	margin: { bottom: 0; }

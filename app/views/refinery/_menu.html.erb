@@ -9,7 +9,7 @@
 <nav id='<%= dom_id %>' class='<%= css %> navbar navbar-fixed-top'>
 	<div class="navbar-inner">
 		<div class="container">
-			<ul class="nav">
+			<ul class="dropdown">
 				<%= render :partial => '/refinery/menu_branch', :collection => roots,
 									 :locals => {
 										 :hide_children => hide_children,

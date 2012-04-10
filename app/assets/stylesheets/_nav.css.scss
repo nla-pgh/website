@@ -1,0 +1,92 @@
+nav#menu {
+	top: 166px;
+
+	ul, li {
+		list-style: none;
+	}
+
+	.active {
+		background: $nlaBlack;
+	}
+
+	// Navigation Menu
+	ul.dropdown {
+		position: relative;
+		height: 40px;
+		margin: 0;
+
+		// First-level (Parents)
+		li {
+			float: left;
+			zoom: 1;
+			padding: {
+				top: 12px;
+				bottom: 12px;
+				left: 5px;
+				right: 5px;
+			}
+
+			&:hover {
+				background: $nlaRed;
+			}
+
+			a {
+				color: white;
+				text-decoration: none;
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+
+		// Parent and child hover
+		li.hover, li:hover {
+			position: relative;
+			@include box-shadow(0 0 2px $nlaBlack);
+		}
+
+		ul {
+			width: 200px;
+			visibility: hidden;
+			position: absolute;
+			left: 0;
+			top: 100%;
+			margin: 0;
+
+			li {
+				float: none;
+				@include gradient-vertical($navbarBackgroundHighlight, $navbarBackground);
+				@include rounded(top, right, 5px);
+				@include rounded(bottom, right, 5px);
+			}
+
+			li.active {
+				background: $nlaBlack;
+			}
+		}
+
+		ul ul {
+			left: 95%; top: 0;
+			padding: {top: 5px;}
+		}
+
+		li:hover > ul {
+			visibility: visible;
+
+			li {
+				@include box-shadow(0 0 2px $nlaBlack);
+			}
+		}
+	}
+			
+
+	li {
+		a {
+			font: {
+				weight: bold;
+				size: 16px;
+			}
+		}
+	}
+}
