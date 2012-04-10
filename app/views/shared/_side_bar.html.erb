@@ -1,0 +1,10 @@
+<div id='social_network_feed'>
+  <h2 id='twitter'>Recent Tweet</h2>
+  <%=raw timeline.first.oembed.html %>
+</div>
+
+<div id='document_list'>
+  <h2 id='documents'>Documents</h2>
+    <%= raw @page.content_for(:documents) %>
+  </h2>
+</div>

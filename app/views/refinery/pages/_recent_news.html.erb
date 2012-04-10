@@ -1,0 +1,13 @@
+<h2 id='news' class='page_header'> Most Recent News </h2>
+<% count = 0; max = 2 %>
+<% latest_news(count: max).each do |item| %>
+  <% klass = "news_item" %>
+  <% if 0 == count then klass += " first" %>
+  <% elsif max -1 == count then klass += " last" %>
+  <% end %>
+
+  <div class="<%= klass %>">
+    <%= render partial: "refinery/pages/news_item.html.erb", locals: {item: item} %>
+  </div>
+  <% count += 1 %>
+<% end %>
