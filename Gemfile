@@ -3,7 +3,6 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 
 gem 'twitter'
-gem 'bootstrap-sass'
 gem 'simple_form'
 gem 'fog'
 
@@ -12,6 +11,7 @@ gem 'fog'
 
 
 group :development, :test do
+	gem 'bootstrap-sass'
   gem 'sqlite3'
 end
 
