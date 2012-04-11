@@ -1,0 +1,19 @@
+<% provide :title, t('.search_results_for', :what => params[:query]) %>
+<% provide :subtitle, "#{(@results ? @results.size : 0)} results" %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Result Type</th>
+      <th>Result Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @results.each do |result| %>
+      <tr>
+        <td><%= result.class.to_s.titleize %></td>
+        <td><%= link_to raw(result.title.gsub(/(#{Regexp.escape(params[:query])})/i, '\1')), result_url(result) %></td>
+      </li>
+    <% end %>
+  </tbody>
+</table>

@@ -21,13 +21,19 @@
 						</div>
 						<div class="modal-footer">
 							<a href="#" class="btn" data-dismiss="modal">Close</a>
-							<%= link_to "Learn how you can help us", page_path(take_action), class: "btn btn-primary", target: "_blank"%>
+							<%= link_to page_path(take_action), class: "btn btn-primary", target: "_blank" do%>
+                Learn how you can help us
+              <% end %>
 							</div>
 					</div>
 				<% end %>
 			<% end %>
 
-			<%= link_to "Get Involved", page_path(take_action), class: "btn btn-large" %>
+      <% if take_action %>
+        <%= link_to page_path(take_action), class: "btn btn-large" do %>
+          Get Involved
+        <% end %>
+      <% end %>
 		</div>
 
 	</div>

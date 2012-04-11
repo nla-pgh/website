@@ -69,5 +69,10 @@ module NlaWebsite2
 			config.oauth_token = "466585376-ZUhSXaop9VcVHtEszZukiTE45MbT0pm5UUH91Bi5"
 			config.oauth_token_secret = "niJe3XQoZrtWOnDgYBc1jHwwcqHe7Tnm0KAWbcpI"
 		end
+
+    # Searchable Models
+    config.to_prepare do
+      Refinery.searchable_models = [Refinery::Page, Refinery::Inquiries::Inquiry, Refinery::Portfolio::Gallery] # Bricks right now: Refinery::News::Item, 
+    end
   end
 end
