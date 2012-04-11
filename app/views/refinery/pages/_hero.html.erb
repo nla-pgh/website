@@ -23,17 +23,15 @@
 							<a href="#" class="btn" data-dismiss="modal">Close</a>
 							<%= link_to page_path(take_action), class: "btn btn-primary", target: "_blank" do%>
                 Learn how you can help us
-              <% end %>
+              <% end if take_action%>
 							</div>
 					</div>
 				<% end %>
 			<% end %>
 
-      <% if take_action %>
-        <%= link_to page_path(take_action), class: "btn btn-large" do %>
-          Get Involved
-        <% end %>
-      <% end %>
+      <%= link_to page_path(take_action), class: "btn btn-large" do %>
+        Get Involved
+      <% end if take_action %>
 		</div>
 
 	</div>
