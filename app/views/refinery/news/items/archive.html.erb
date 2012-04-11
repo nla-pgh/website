@@ -1,0 +1,14 @@
+<% provide :title, "#{t('.news_item_archive_for', :date => @date_title)}" %>
+
+<div class="row">
+  <div class="span9">
+    <% if @items.any? %>
+      <%= render :partial => "/refinery/news/shared/item", :collection => @items %>
+    <% else %>
+      <p>No articles posted</p>
+    <% end %>
+  </div>
+  <div class="span3">
+    <%= render :partial => '/refinery/news/shared/body_content_right' %>
+  </div>
+</div>

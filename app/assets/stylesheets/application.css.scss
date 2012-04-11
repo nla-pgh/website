@@ -36,8 +36,9 @@ body {
 		top: 211px; 
 	}
 
-	#page {
+	#page_container {
 		min-height: 400px;
+    padding: { bottom: 10px; }
 	}
 }
 
@@ -86,7 +87,6 @@ ul#sn-icons {
 /************/
 .hero-unit#hero {
   $preziHeight: 400px;
-	margin: { top: 10px; }
 
 	height: $preziHeight;
 

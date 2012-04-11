@@ -7,6 +7,6 @@
 </h6>
 
 <div id='news_link'>
-<%= raw truncate(item.body.dup, length: 500).gsub(/<[^p]*\.\.\./, "...") %>
+  <%= raw safe_truncate(item.body, length: 500) %>
 </div>
 <p> <%= link_to "Read full article", news_item_path(item) %> </p>

@@ -1,0 +1,16 @@
+<div class="well">
+  <ul class="nav nav-list">
+    <li class="nav-header">
+      <i class="icon-tags"></i>
+      <%= t('.recent_posts') %>
+    </li>
+    <% @items.each do |item| %>
+      <li>
+        <%= link_to refinery.news_item_path(item) do%>
+          <i class="icon-pencil"></i>
+          <%=raw item.title %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

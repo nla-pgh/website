@@ -17,13 +17,13 @@
 
 			<!-- Body -->
       <section id="page" class="container">
-				<% if @page and not @page.home? %>
-					<div class="page-header">
-						<h1><%= @page.title.titlecase %>
-							<small><%= sanitize @page.content_for(:subtitle), tags: []%></small>
-					</h1>
-					</div>
-				<% end %>
+        <% unless home %>
+          <div class="page-header">
+            <h1><%= yield :title%>
+              <small><%=yield :subtitle%></small>
+            </h1>
+          </div>
+        <% end %>
         <%= yield %>
       </section>
 
@@ -32,5 +32,24 @@
 		<footer class="navbar">
 			<%= render '/refinery/footer' -%>
 		</footer>
+    
+    <% if Rails.env.development? %>
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <div class="well">
+              <%= debug params %>
+            </div>
+          </div>
+
+          <div class="span12">
+            <div class="well">
+              <%= debug session %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+
   </body>
 </html>

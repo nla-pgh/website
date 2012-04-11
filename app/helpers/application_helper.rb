@@ -4,6 +4,10 @@ module ApplicationHelper
     Refinery::News::Item.latest(number[:count])
   end
 
+  def safe_truncate(text, options = {})
+    truncate(text, options).gsub(/<[^p]*\.\.\./, "...")
+  end
+
   def timeline
     Twitter.user_timeline("NLA_Pittsburgh", include_entities: true)
   end
@@ -31,4 +35,11 @@ module ApplicationHelper
 		Refinery::Page.find_by_title("Take Action")
 	end
 
+  def home
+    if @page and @page.home?
+      true
+    else
+      false
+    end
+  end
 end

@@ -1,3 +1,6 @@
+<% provide :title, @page.title.titlecase %>
+<% provide :subtitle, (sanitize @page.content_for(:subtitle), tags: [])%>
+
 <div class="row">
 
 	<div id='body_content' class="span7">

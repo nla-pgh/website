@@ -1,18 +1,10 @@
-<div class="row">
-	<div class="span12">
-		<div class="page-header">
-			<% if @gallery %>
-				<h1><%= @gallery.title.strip %>
-					<small><%= sanitize @gallery.description, tags: []%></small>
-				</h1>
-			<% else %>
-				<h1>Media Galleries
-					<small>Choose from a gallery from below</small>
-				</h1>
-			<% end %>
-		</div>
-	</div>
-</div>
+<% if @gallery %>
+  <% provide :title, (@gallery.title.strip) %>
+  <% provide :subtitle, (sanitize @gallery.description, tags: [])%>
+<% else %>
+  <% provide :title, "Media Galleries" %>
+  <% provide :subtitle, "Choose from a gallery from below"%>
+<% end %>
 
 <div class="row">
 	<div class="span8">

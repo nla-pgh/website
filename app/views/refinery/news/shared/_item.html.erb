@@ -1,0 +1,24 @@
+<article class="item_post" id="<%= dom_id(item) %>">
+  <header>
+    <h2><%= link_to item.title, refinery.news_item_path(item) %></h2>
+    <section class='details'>
+      <time datetime="<%=l item.publish_date.to_date, :format => :default %>" class='posted_at'>
+        <p>
+          <%= t('created_at', :scope => 'refinery.news.shared.items', :when => l(item.publish_date.to_date, :format => :short)) %>
+        </p>
+      </time>
+    </section>
+  </header>
+  <section class='clearfix'>
+    <% if news_item_teaser_enabled? %>
+      <%= raw safe_truncate item.body, length: 300 %>
+    <% else %>
+      <%= item.body.html_safe %>
+    <% end %>
+  </section>
+  <footer>
+    <p>
+      <%= link_to "Read more", refinery.news_item_path(item) if news_item_teaser_enabled? %>
+    </p>
+  </footer>
+</article>

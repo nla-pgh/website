@@ -1,0 +1,13 @@
+<div class="well">
+  <ul class="nav nav-list">
+    <li class="nav-header">
+      <i class="icon-book"></i>
+      <%= t('archives', :scope => 'refinery.news.shared') %>
+    </li>
+    <% items.each do |key, value| %>
+      <li>
+        <%= news_item_archive_link(value.first) %>
+      </li>
+    <% end %>
+  </ul>
+</div>
