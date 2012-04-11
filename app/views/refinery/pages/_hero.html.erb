@@ -7,6 +7,7 @@
 		<div id='take-actions' class="span3">
 			<% [mission, vision].each do |page| %>
 				<% if page %>
+
 					<%= link_to page.title.titlecase, "##{page.title.tr(' ', '-')}", class: 'btn btn-large', data: { toggle: 'modal' } %>
 					<div class="modal hide fade" id=<%= "#{page.title.tr(' ', '-')}"%>>
 						<div class="modal-header">
@@ -28,5 +29,6 @@
 
 			<%= link_to "Get Involved", page_path(take_action), class: "btn btn-large" %>
 		</div>
+
 	</div>
 </div>
