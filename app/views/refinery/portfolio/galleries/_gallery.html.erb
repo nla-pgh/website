@@ -1,20 +1,20 @@
 <li id="<%= dom_id(gallery) %>" class="span3">
-	<div class="thumbnail">
-		<%= link_to refinery.portfolio_gallery_path(gallery) do %>
-			<% if gallery.cover_image.present? %>
-					<%= image_fu gallery.cover_image.image, 
-								::Refinery::Portfolio.cover_image_thumb_size,
-								{:title => gallery.cover_image.title} %>
-			<% end %>
+	<%= link_to refinery.portfolio_gallery_path(gallery) do %>
+		<div class="thumbnail">
+				<% if gallery.cover_image.present? %>
+						<%= image_fu gallery.cover_image.image, 
+									::Refinery::Portfolio.cover_image_thumb_size,
+									{:title => gallery.cover_image.title} %>
+				<% end %>
 
-			<div class="caption">
-				<div class="well">
-					<h2><%= gallery.title %></h2>
-					<% if ::Refinery::Portfolio.display_gallery_text %>
-						<%= raw gallery.description %>
-					<% end %>
+				<div class="caption">
+					<div class="well">
+						<h2><%= gallery.title %></h2>
+						<% if ::Refinery::Portfolio.display_gallery_text %>
+							<%= raw gallery.description %>
+						<% end %>
+					</div>
 				</div>
-			</div>
-		<% end %>
-	</div>
+		</div>
+	<% end %>
 </li>
