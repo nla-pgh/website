@@ -1,4 +1,4 @@
-<li id="<%= dom_id(gallery) %>" class="span3">
+<div id="<%= dom_id(gallery) %>" class="span3">
 	<div class="thumbnail">
 		<%= link_to refinery.portfolio_gallery_path(gallery) do %>
 			<% if gallery.cover_image.present? %>
@@ -17,4 +17,4 @@
 			</div>
 		<% end %>
 	</div>
-</li>
+</div>
