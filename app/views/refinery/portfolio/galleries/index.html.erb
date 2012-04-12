@@ -16,11 +16,15 @@
 			<%= render :partial => "galleries", :locals => { :galleries => @galleries } %>
 		</div>
 	<% elsif @galleries.any? and @items.any? %>
-		<div class="span8">
+		<div class="span9">
 			<%= render :partial => "refinery/portfolio/items/items", :locals => {:items => @items} %>
 		</div>
-		<div class="span4">
+		<div class="span3">
 			<%= render :partial => "galleries", :locals => {:galleries => @galleries} %>
+		</div>
+	<% else %>
+		<div class="span12">
+			<p><em>No Galleries Created</em></p>
 		</div>
 	<% end %>
 </div>
