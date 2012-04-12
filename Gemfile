@@ -6,10 +6,6 @@ gem 'twitter'
 gem 'simple_form'
 gem 'fog'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
-
-
 group :development, :test do
 	gem 'bootstrap-sass'
   gem 'sqlite3'
