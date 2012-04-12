@@ -5,6 +5,7 @@ gem 'rails', '3.2.3'
 gem 'twitter'
 gem 'simple_form'
 gem 'fog'
+gem 'thin'
 
 group :development, :test do
   gem 'sqlite3'
