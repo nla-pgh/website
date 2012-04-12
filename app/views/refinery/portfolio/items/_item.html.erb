@@ -1,6 +1,6 @@
 <li class="span6">
 	<div class="thumbnail">
-		<%= link_to item.image.url do %>
+		<%= link_to item.image.url, class: "thumbnail" do %>
 			<%= image_tag(item.image.url, {:id => dom_id(item), :title => item.title}) %>
 			<% if ::Refinery::Portfolio.display_item_text and not item.title.blank? and not item.caption.blank?%>
 				<div class="caption">
