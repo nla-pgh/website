@@ -7,10 +7,32 @@
 <% end %>
 
 <div class="row">
-	<div class="span8">
-		<%= render :partial => "refinery/portfolio/items/items", :locals => {:items => @items} %>
-	</div>
-	<div class="span4">
-		<%= render :partial => "galleries", :locals => {:galleries => @galleries} %>
-	</div>
+	<% if @items.any? and @galleries.empty? %>
+		<div class="span12">
+			<%= render :partial => "refinery/portfolio/items/items", :locals => { :items => @items } %>
+		</div>
+	<% elsif @galleries.any? and @items.empty? %>
+		<div class="span12">
+			<%= render :partial => "galleries", :locals => { :galleries => @galleries } %>
+		</div>
+	<% elsif @galleries.any? and @items.any? %>
+		<div class="span8">
+			<%= render :partial => "refinery/portfolio/items/items", :locals => {:items => @items} %>
+		</div>
+		<div class="span4">
+			<%= render :partial => "galleries", :locals => {:galleries => @galleries} %>
+		</div>
+	<% end %>
 </div>
+<% if Rails.env.development? %>
+	<div class="row">
+		<div class="span6">
+			<%= debug @items %>
+			<%= debug @items.empty? %>
+		</div>
+		<div class="span6">
+			<%= debug @galleries %>
+			<%= debug @galleries.any? %>
+		</div>
+	</div>
+<% end %>
