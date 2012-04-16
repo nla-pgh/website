@@ -98,6 +98,10 @@ ul#sn-icons {
 	#prezi {
 		height: $preziHeight;
 		z-index: -99;
+
+    embed {
+      z-index: -100;
+    }
 	}
 
 	#take-actions {
