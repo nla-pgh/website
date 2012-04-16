@@ -91,6 +91,9 @@ ul#sn-icons {
   z-index: 1;
 }
 
+embed {
+  z-index: -100;
+}
 /************/
 /*Hero Unit */
 /************/
@@ -103,9 +106,6 @@ ul#sn-icons {
 		height: $preziHeight;
 		z-index: -99;
 
-    embed {
-      z-index: -100;
-    }
 	}
 
 	#take-actions {
