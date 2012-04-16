@@ -14,7 +14,6 @@ module ApplicationHelper
 
 	def prezi
 		raw = copywriting('Front Page Presentation', scope: 'Home Page', phrase_type: 'text')
-    raw
 		if not raw
 			extract_params = /(<param.*<\/embed>)/.match(raw)[1]
 			append_opaque = "<param name='wmode' value='opaque'>\n" + extract_params
@@ -22,6 +21,7 @@ module ApplicationHelper
 			# Replace heights and width (to 100%)
 			append_opaque.gsub(/height="\d*"/, 'height="100%"').gsub(/width="\d*"/, 'width="100%"')
 		end
+    raw
 	end
 
 	def mission
