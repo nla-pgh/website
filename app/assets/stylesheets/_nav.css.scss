@@ -1,4 +1,5 @@
 nav#menu {
+  z-index: 100;
 	top: 166px;
 
 	ul, li {
@@ -11,6 +12,7 @@ nav#menu {
 
 	// Navigation Menu
 	ul.dropdown {
+    z-index: 100;
 		position: relative;
 		height: 40px;
 		margin: 0;

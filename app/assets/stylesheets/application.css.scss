@@ -63,6 +63,8 @@ header {
 		background: white;
 		filter: none;
 	}
+
+  z-index: 100;
 }
 
 /************/
@@ -87,13 +89,6 @@ ul#sn-icons {
   }
 }
 
-* {
-  z-index: 1;
-}
-
-embed {
-  z-index: -100;
-}
 /************/
 /*Hero Unit */
 /************/
@@ -105,7 +100,6 @@ embed {
 	#prezi {
 		height: $preziHeight;
 		z-index: -99;
-
 	}
 
 	#take-actions {
