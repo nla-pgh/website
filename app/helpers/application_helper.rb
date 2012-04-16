@@ -15,10 +15,13 @@ module ApplicationHelper
 	def prezi
 		raw = copywriting('Front Page Presentation', scope: 'Home Page', phrase_type: 'text')
 		if raw
-      match = /(<param.*<\/embed>)/.match(raw)
+      match = /(<param.*)<embed (.*)>)/.match(raw)
       if match
         extract_params = match[1]
-        append_opaque = "<param name='wmode' value='opaque' />\n" + extract_params
+        append_opaque = "<param name='wmode' value='opaque' />" + extract_params
+
+        extract_embed = match[2]
+        append_opaque = "#{append_opaque} <embed #{extract_embed} wmode=\"opaque\" />" 
 
         # Replace heights and width (to 100%)
         append_opaque.gsub(/height="\d*"/, 'height="100%"').gsub(/width="\d*"/, 'width="100%"')
