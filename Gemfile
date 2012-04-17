@@ -25,6 +25,10 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+group :test do
+  gem 'refinerycms-testing'
+end
+
 gem 'jquery-rails'
 
 group :production do
