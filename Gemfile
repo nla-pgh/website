@@ -7,6 +7,10 @@ gem 'simple_form'
 gem 'fog'
 gem 'thin'
 
+group :development do
+  gem 'heroku'
+end
+
 group :development, :test do
   gem 'sqlite3'
 end
