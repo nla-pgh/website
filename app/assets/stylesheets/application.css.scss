@@ -29,6 +29,7 @@ $dropdownLinkColorHover: darken(white, 20%);
 
 // Links
 $linkColor: $nlaRed;
+
 @import "bootstrap";
 
 body {
@@ -102,28 +103,20 @@ ul#sn-icons {
 		z-index: -99;
 	}
 
-	#take-actions {
-		height: $preziHeight;
+}
 
-		& > a {
-			@include buttonBackground($navbarBackgroundHighlight, $navbarBackground);
+#take-actions {
+  & > a {
+    @include buttonBackground($navbarBackgroundHighlight, $navbarBackground);
 
-			width: 100%;
+    color: white;
+    font: {
+      weight: bold;
+      size: 1.5em;
+    }
 
-			color: white;
-			font: {
-				weight: bold;
-				size: 3em;
-			}
-
-      line: { height: 45px; }
-
-			margin: {
-				left: 1%;
-				top: 8%;
-			}
-		}
-	}
+    width: 29.9%;
+  }
 }
 
 /*************/

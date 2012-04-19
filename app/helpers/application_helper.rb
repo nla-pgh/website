@@ -50,4 +50,13 @@ module ApplicationHelper
       false
     end
   end
+
+  def carousel_images
+    raw = copywriting('Carousel Images', scope: 'Home Page', phrase_type: 'text')
+    if raw
+      YAML.load(raw)
+    else
+      []
+    end
+  end
 end

@@ -1,0 +1,27 @@
+<% [mission, vision].each do |page| %>
+  <% if page %>
+
+    <%= link_to page.title.titlecase, "##{page.title.tr(' ', '-')}", class: 'btn btn-large', data: { toggle: 'modal' } %>
+    <div class="modal hide fade" id=<%= "#{page.title.tr(' ', '-')}"%>>
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal">x</a>
+        <h3><%= page.title.titlecase%></h3>
+      </div>
+      <div class="modal-body">
+        <p>
+        <%=raw page.content_for(:body) %>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Close</a>
+        <%= link_to page_path(take_action), class: "btn btn-primary", target: "_blank" do%>
+          Learn how you can help us
+        <% end if take_action%>
+        </div>
+    </div>
+  <% end %>
+<% end %>
+
+<%= link_to page_path(take_action), class: "btn btn-large" do %>
+  Get Involved
+<% end if take_action %>
