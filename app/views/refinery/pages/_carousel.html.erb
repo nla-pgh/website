@@ -1,42 +1,36 @@
-<div class="row">
-  <div class="span12">
-    <% if carousel_images.any? %>
-      <div id="carousel" class="carousel">
-        <!-- Carousel items -->
-        <div class="carousel-inner">
-          <div class="row">
-            
-            <% carousel_images.each_with_index do |image_hash, index| %>
-              <% if img = Refinery::Image.find_by_image_name(image_hash["file"]) %>
-                <div class="item <%= "active" if index == 0 %>">
-                  <img class="span12" src="<%= img.url %>" alt="<%= img.title %>"></img>
+<% if carousel_images.any? %>
+  <div id="carousel" class="carousel">
+    <!-- Carousel items -->
+    <div class="carousel-inner">
+      <% carousel_images.each_with_index do |image_hash, index| %>
+        <% if img = Refinery::Image.find(:first, conditions: [ "lower(image_name) = ?", image_hash["file"].downcase]) %>
+          <div class="item <%= "active" if index == 0 %>">
+            <img src="<%= img.url %>" alt="<%= img.title %>"></img>
 
-                  <% if image_hash["title"] or image_hash["caption"] %>
-                    <div class="carousel-caption">
+            <% if image_hash["title"] or image_hash["caption"] %>
+              <div class="carousel-caption">
 
-                      <% if image_hash["title"] %>
-                        <h4><%=raw image_hash["title"]%></h4>
-                      <% end %>
+                <% if image_hash["title"] %>
+                  <h4><%=raw image_hash["title"]%></h4>
+                <% end %>
 
-                      <% if image_hash["caption"] %>
-                        <p><%=raw image_hash["caption"]%></p>
-                      <% end %>
+                <% if image_hash["caption"] %>
+                  <p><%=raw image_hash["caption"]%></p>
+                <% end %>
 
-                    </div>
-                  <% end %>
-                </div>
-              <% end %>
+              </div>
             <% end %>
           </div>
-
-        </div>
-
-        <% if carousel_images.size > 1 %>
-          <!-- Carousel nav -->
-          <a class="carousel-control left" href="#carousel" data-slide="prev"> <%= "<" %></a>
-          <a class="carousel-control right" href="#carousel" data-slide="next"> <%= ">" %></a>
         <% end %>
-      </div>
+      <% end %>
+    </div>
+
+    <% if carousel_images.size > 1 %>
+      <!-- Carousel nav -->
+      <a class="carousel-control left" href="#carousel" data-slide="prev"> <%= "<" %></a>
+      <a class="carousel-control right" href="#carousel" data-slide="next"> <%= ">" %></a>
     <% end %>
+
   </div>
-</div>
+
+<% end %>

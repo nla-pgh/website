@@ -90,9 +90,7 @@ ul#sn-icons {
   }
 }
 
-/************/
-/*Hero Unit */
-/************/
+
 .hero-unit#hero {
   $preziHeight: 400px;
 
@@ -105,6 +103,26 @@ ul#sn-icons {
 
 }
 
+
+/************/
+/*Hero Unit */
+/************/
+/***********/
+/*Carousel**/
+/***********/
+#carousel {
+  img {
+    width: 100%;
+
+    margin: auto;
+    @include border-radius(10px);
+  }
+
+  .carousel-caption p {
+    color: white;
+  }
+}
+
 #take-actions {
   & > a {
     @include buttonBackground($navbarBackgroundHighlight, $navbarBackground);
@@ -115,7 +133,7 @@ ul#sn-icons {
       size: 1.5em;
     }
 
-    width: 29.9%;
+    width: 29.5%;
   }
 }
 
