@@ -1,5 +1,5 @@
 <%- if items.present? -%>
 	<ul class="thumbnails">
-		<%= render items %>
+    <%= render :partial => items, :locals => { :klass => klass }  %>
 	</ul>
 <%- end -%>

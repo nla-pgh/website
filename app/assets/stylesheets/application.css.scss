@@ -91,6 +91,10 @@ ul#sn-icons {
 }
 
 
+/************/
+/*Hero Unit */
+/************/
+
 .hero-unit#hero {
   $preziHeight: 400px;
 
@@ -103,16 +107,13 @@ ul#sn-icons {
 
 }
 
-
-/************/
-/*Hero Unit */
-/************/
 /***********/
 /*Carousel**/
 /***********/
 #carousel {
   img {
     width: 100%;
+    max-height: 400px;
 
     margin: auto;
     @include border-radius(10px);

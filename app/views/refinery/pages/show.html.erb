@@ -2,13 +2,11 @@
 <% provide :subtitle, (sanitize @page.content_for(:subtitle), tags: [])%>
 
 <div class="row">
-
-	<div id='body_content' class="span7">
+	<div id='body_content' class="span8">
 		<%=raw @page.content_for(:body) %>
 	</div>
 
 	<div id='site_body_content' class="span4">
 		<%=raw @page.content_for(:side_body) %>
 	</div>
-
 </div>

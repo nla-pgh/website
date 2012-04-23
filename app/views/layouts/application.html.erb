@@ -21,6 +21,7 @@
 
 			<!-- Body -->
       <section id="page" class="container">
+        <!-- Body Title -->
         <% unless home %>
           <div class="page-header">
             <h1><%= yield :title%>
@@ -28,9 +29,12 @@
             </h1>
           </div>
         <% end %>
+
+        <!-- Body Content -->
         <%= yield %>
       </section>
     </div>
+
 		<!-- Footer -->
 		<footer class="navbar">
 			<%= render '/refinery/footer' -%>

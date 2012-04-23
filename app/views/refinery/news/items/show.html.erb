@@ -1,6 +1,6 @@
 <% provide :title, @item.title %>
 <div class="row">
-  <article class="news_item span9">
+  <article class="news_item span8">
     <p><%= t('.published') %> <%= l(@item.publish_date, :format => :long) %></p>
 
     <%= @item.body.html_safe %>
@@ -15,7 +15,7 @@
     </p>
   </article>
 
-  <div class="span3">
+  <div class="span4">
     <%= render partial: 'recent_posts' %>
   </div>
 </div>

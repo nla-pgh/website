@@ -1,0 +1,12 @@
+<% @items.each do |item| %>
+  <article class="news_item_truncated">
+    <h2><%= link_to item.title, refinery.news_item_path(item) %></h2>
+    <p>Published:  <%= l(item.publish_date, :format => :long) %></p>
+      <%= raw safe_truncate  item.body, :length => 500 %>
+    <p>
+      <%= link_to "Read More", refinery.news_item_path(item) %>
+    </p>
+  </article>
+<% end %>
+
+<%= will_paginate @items %>
