@@ -134,7 +134,8 @@ ul#sn-icons {
       size: 1.5em;
     }
 
-    width: 29.5%;
+    width: 33%;
+    @include box-sizing(border-box);
   }
 }
 
