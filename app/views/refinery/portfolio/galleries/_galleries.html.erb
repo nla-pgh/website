@@ -1,5 +1,5 @@
 <%- if galleries.present? -%>
-	<ul id="galleries" class='no-list thumbnails'>
-    <%= render :partial => galleries, :locals => { :klass => klass } %>
+	<ul id="galleries" class='thumbnails'>
+      <%= render :partial => galleries, :locals => { :klass => klass } %>
 	</ul>
 <%- end -%>
