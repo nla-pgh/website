@@ -19,7 +19,7 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem 'bootstrap-sass'
+  gem 'bootstrap-sass'
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
 
@@ -60,9 +60,9 @@ gem 'refinerycms', '~> 2.0.0'
 # Specify additional Refinery CMS Extensions here (all optional):
 gem 'refinerycms-i18n', '~> 2.0.0'
 #  gem 'refinerycms-blog', '~> 2.0.0'
-  gem 'refinerycms-inquiries', '~> 2.0.0'
-  gem 'refinerycms-search', '~> 2.0.0', :git => 'git://github.com/resolve/refinerycms-search.git', :branch => "2-0-stable"
-  gem 'refinerycms-page-images', '~> 2.0.0'
-	gem 'refinerycms-news', '~> 2.0.0'
-	gem 'refinerycms-copywriting'
-	gem 'refinerycms-portfolio', :git => 'git://github.com/resolve/refinerycms-portfolio.git', :branch => '2-0-stable'
+gem 'refinerycms-inquiries', '~> 2.0.0'
+gem 'refinerycms-search', '~> 2.0.0', :git => 'git://github.com/resolve/refinerycms-search.git', :branch => "2-0-stable"
+gem 'refinerycms-page-images', '~> 2.0.0'
+gem 'refinerycms-news', '~> 2.0.0'
+gem 'refinerycms-copywriting'
+gem 'refinerycms-portfolio', :git => 'git://github.com/resolve/refinerycms-portfolio.git', :branch => '2-0-stable'
