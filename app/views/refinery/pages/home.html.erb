@@ -14,14 +14,21 @@
 </div>
 
 <div class="row">
-	<div id='body_content' class="span8">
-    <%= render 'refinery/pages/recent_news' %> 
+	<div class="span8">
+        <%= render 'refinery/pages/recent_news' %> 
 	</div>
 
-	<div id='site_body_content' class="span4">
-    <%= render 'shared/side_bar' %>
+	<div class="span4">
+        <%= render 'shared/side_bar' %>
 	</div>
 
+    <div id='body_content' class='span8'>
+        <%= raw @page.content_for(:body) %>
+    </div>
+
+    <div id='side_body_content' class='span4'>
+        <%= raw @page.content_for(:side_body) %>
+    </div>
 </div>
 
 <div class="row">
