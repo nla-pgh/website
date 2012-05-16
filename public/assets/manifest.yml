@@ -5,7 +5,7 @@ sn_icons/fb.png: sn_icons/fb-77edfbfd394db9534b4457085950bc92.png
 sn_icons/twitter.png: sn_icons/twitter-4a446f8597b193e530103d40d349f804.png
 sn_icons/youtube.png: sn_icons/youtube-66032480def4462238c88b20c0265bfa.png
 application.js: application-242c11b9c802122d6ef266f02b541b72.js
-application.css: application-a651e59c73b6ec7f0aade8916691acdf.css
+application.css: application-591b4246fadd44f9618889648470ce2b.css
 refinery/portfolio.js: refinery/portfolio-1c6e2e9b42735276fa105c780d2d52c9.js
 refinery/portfolio/frontend.js: refinery/portfolio/frontend-1c6e2e9b42735276fa105c780d2d52c9.js
 refinery/portfolio/admin/galleries.css: refinery/portfolio/admin/galleries-7d849d3889a9cae275a7ee6dc8844bb8.css
