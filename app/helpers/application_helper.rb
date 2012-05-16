@@ -1,5 +1,13 @@
 module ApplicationHelper
 
+  def image_url(source)
+      abs_path = image_path(source)
+      unless abs_path =~ /\Ahttp/
+          abs_path = "#{root_url}#{abs_path}"
+      end
+      abs_path
+  end
+
   def latest_news(number)
     Refinery::News::Item.latest(number[:count])
   end
