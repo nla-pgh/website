@@ -3,7 +3,7 @@ module ApplicationHelper
   def image_url(source)
       abs_path = image_path(source)
       unless abs_path =~ /\Ahttp/
-          abs_path = "#{root_url}#{abs_path}"
+          abs_path = "http://neighborhoodlearning.org/#{abs_path}"
       end
       abs_path
   end
