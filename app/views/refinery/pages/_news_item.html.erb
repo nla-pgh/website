@@ -7,7 +7,7 @@
 </h6>
 
 <div id='news_link'>
-  <%= raw safe_truncate(item.body, length: 500) %>
+  <%= raw safe_truncate(item.body, length: 500, :separator => ' ') %>
 </div>
 
 <p> <%= link_to "Read full article", news_item_path(item) %> </p>
