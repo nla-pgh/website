@@ -65,4 +65,4 @@ gem 'refinerycms-search', '~> 2.0.0', :git => 'git://github.com/resolve/refinery
 gem 'refinerycms-page-images', '~> 2.0.0'
 gem 'refinerycms-news', '~> 2.0.0'
 gem 'refinerycms-copywriting'
-gem 'refinerycms-portfolio', :git => 'git://github.com/resolve/refinerycms-portfolio.git', :branch => '2-0-stable'
+gem 'refinerycms-portfolio', :git => 'git://github.com/refinery/refinerycms-portfolio.git', :branch => '2-0-stable'
