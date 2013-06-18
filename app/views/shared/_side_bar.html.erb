@@ -1,6 +1,6 @@
 <div id='social_network_feed'>
   <h2 id='twitter'>Recent Tweet</h2>
-  <%=raw timeline.first.oembed.html %>
+  <%=raw Twitter.oembed(timeline.first.id).html %>
 </div>
 
 <div id='document_list'>

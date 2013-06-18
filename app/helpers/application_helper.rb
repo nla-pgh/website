@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def timeline
-    Twitter.user_timeline("NLA_Pittsburgh", include_entities: true)
+    Twitter.user_timeline("NLA_Pittsburgh", count: 1)
   end
 
 	def prezi
