@@ -165,7 +165,7 @@ footer.navbar {
 
 	// Act like a fixed navbar
 	.container {
-		@include gridCoreSpan($gridColumns, $gridColumnWidth, $gridGutterWidth);
+		@include grid-core-span($gridColumns, $gridColumnWidth, $gridGutterWidth);
 	}
 
 	a {
